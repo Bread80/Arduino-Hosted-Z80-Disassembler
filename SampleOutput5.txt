@@ -1,0 +1,1552 @@
+****************
+** Sample output
+** This test code runs through every opcode with every possible prefix
+** (I.e. IX, IY prefixes and ED, CB opcode sets)
+** With MAXPARAMCOUNT = 5
+****************
+1: 00             NOP  
+3: 01 02 03       LD BC,0302h
+1: 02             LD (BC),A
+1: 03             INC BC 
+1: 04             INC B 
+1: 05             DEC B 
+2: 06 02          LD B,02h
+1: 07             RLCA  
+1: 08             EX AF,AF'
+1: 09             ADD HL,BC
+1: 0a             LD A,(BC)
+1: 0b             DEC BC 
+1: 0c             INC C 
+1: 0d             DEC C 
+2: 0e 02          LD C,02h
+1: 0f             RRCA  
+2: 10 02          DJNZ 02h 
+3: 11 02 03       LD DE,0302h
+1: 12             LD (DE),A
+1: 13             INC DE 
+1: 14             INC D 
+1: 15             DEC D 
+2: 16 02          LD D,02h
+1: 17             RLA  
+2: 18 02          JR 02h 
+1: 19             ADD HL,DE
+1: 1a             LD A,(DE)
+1: 1b             DEC DE 
+1: 1c             INC E 
+1: 1d             DEC E 
+2: 1e 02          LD E,02h
+1: 1f             RRA  
+2: 20 02          JR NZ,02h
+3: 21 02 03       LD HL,0302h
+3: 22 02 03       LD (0302h),HL
+1: 23             INC HL 
+1: 24             INC H 
+1: 25             DEC H 
+2: 26 02          LD H,02h
+1: 27             DAA  
+2: 28 02          JR Z,02h
+1: 29             ADD HL,HL
+3: 2a 02 03       LD HL,(0302h)
+1: 2b             DEC HL 
+1: 2c             INC L 
+1: 2d             DEC L 
+2: 2e 02          LD L,02h
+1: 2f             CPL  
+2: 30 02          JR NC,02h
+3: 31 02 03       LD SP,0302h
+3: 32 02 03       LD (0302h),A
+1: 33             INC SP 
+1: 34             INC (HL) 
+1: 35             DEC (HL) 
+2: 36 02          LD (HL),02h
+1: 37             SCF  
+2: 38 02          JR C,02h
+1: 39             ADD HL,SP
+3: 3a 02 03       LD A,(0302h)
+1: 3b             DEC SP 
+1: 3c             INC A 
+1: 3d             DEC A 
+2: 3e 02          LD A,02h
+1: 3f             CCF  
+1: 40             LD B,B
+1: 41             LD B,C
+1: 42             LD B,D
+1: 43             LD B,E
+1: 44             LD B,H
+1: 45             LD B,L
+1: 46             LD B,(HL)
+1: 47             LD B,A
+1: 48             LD C,B
+1: 49             LD C,C
+1: 4a             LD C,D
+1: 4b             LD C,E
+1: 4c             LD C,H
+1: 4d             LD C,L
+1: 4e             LD C,(HL)
+1: 4f             LD C,A
+1: 50             LD D,B
+1: 51             LD D,C
+1: 52             LD D,D
+1: 53             LD D,E
+1: 54             LD D,H
+1: 55             LD D,L
+1: 56             LD D,(HL)
+1: 57             LD D,A
+1: 58             LD E,B
+1: 59             LD E,C
+1: 5a             LD E,D
+1: 5b             LD E,E
+1: 5c             LD E,H
+1: 5d             LD E,L
+1: 5e             LD E,(HL)
+1: 5f             LD E,A
+1: 60             LD H,B
+1: 61             LD H,C
+1: 62             LD H,D
+1: 63             LD H,E
+1: 64             LD H,H
+1: 65             LD H,L
+1: 66             LD H,(HL)
+1: 67             LD H,A
+1: 68             LD L,B
+1: 69             LD L,C
+1: 6a             LD L,D
+1: 6b             LD L,E
+1: 6c             LD L,H
+1: 6d             LD L,L
+1: 6e             LD L,(HL)
+1: 6f             LD L,A
+1: 70             LD (HL),B
+1: 71             LD (HL),C
+1: 72             LD (HL),D
+1: 73             LD (HL),E
+1: 74             LD (HL),H
+1: 75             LD (HL),L
+1: 76             HALT  
+1: 77             LD (HL),A
+1: 78             LD A,B
+1: 79             LD A,C
+1: 7a             LD A,D
+1: 7b             LD A,E
+1: 7c             LD A,H
+1: 7d             LD A,L
+1: 7e             LD A,(HL)
+1: 7f             LD A,A
+1: 80             ADD A,B
+1: 81             ADD A,C
+1: 82             ADD A,D
+1: 83             ADD A,E
+1: 84             ADD A,H
+1: 85             ADD A,L
+1: 86             ADD A,(HL)
+1: 87             ADD A,A
+1: 88             ADC A,B
+1: 89             ADC A,C
+1: 8a             ADC A,D
+1: 8b             ADC A,E
+1: 8c             ADC A,H
+1: 8d             ADC A,L
+1: 8e             ADC A,(HL)
+1: 8f             ADC A,A
+1: 90             SUB A,B
+1: 91             SUB A,C
+1: 92             SUB A,D
+1: 93             SUB A,E
+1: 94             SUB A,H
+1: 95             SUB A,L
+1: 96             SUB A,(HL)
+1: 97             SUB A,A
+1: 98             SBC A,B
+1: 99             SBC A,C
+1: 9a             SBC A,D
+1: 9b             SBC A,E
+1: 9c             SBC A,H
+1: 9d             SBC A,L
+1: 9e             SBC A,(HL)
+1: 9f             SBC A,A
+1: a0             AND A,B
+1: a1             AND A,C
+1: a2             AND A,D
+1: a3             AND A,E
+1: a4             AND A,H
+1: a5             AND A,L
+1: a6             AND A,(HL)
+1: a7             AND A,A
+1: a8             XOR A,B
+1: a9             XOR A,C
+1: aa             XOR A,D
+1: ab             XOR A,E
+1: ac             XOR A,H
+1: ad             XOR A,L
+1: ae             XOR A,(HL)
+1: af             XOR A,A
+1: b0             OR A,B
+1: b1             OR A,C
+1: b2             OR A,D
+1: b3             OR A,E
+1: b4             OR A,H
+1: b5             OR A,L
+1: b6             OR A,(HL)
+1: b7             OR A,A
+1: b8             CP A,B
+1: b9             CP A,C
+1: ba             CP A,D
+1: bb             CP A,E
+1: bc             CP A,H
+1: bd             CP A,L
+1: be             CP A,(HL)
+1: bf             CP A,A
+1: c0             RET NZ 
+1: c1             POP BC 
+3: c2 02 03       JP NZ,0302h
+3: c3 02 03       JP 0302h 
+3: c4 02 03       CALL NZ,0302h
+1: c5             PUSH BC 
+2: c6 02          ADD A,02h
+1: c7             RST 00h 
+1: c8             RET Z 
+1: c9             RET  
+3: ca 02 03       JP Z,0302h
+2: cb 02          RLC D 
+3: cc 02 03       CALL Z,0302h
+3: cd 02 03       CALL 0302h 
+2: ce 02          ADC A,02h
+1: cf             RST 08h 
+1: d0             RET NC 
+1: d1             POP DE 
+3: d2 02 03       JP NC,0302h
+2: d3 02          OUT (02h),A
+3: d4 02 03       CALL NC,0302h
+1: d5             PUSH DE 
+2: d6 02          SUB A,02h
+1: d7             RST 10h 
+1: d8             RET C 
+1: d9             EXX  
+3: da 02 03       JP C,0302h
+2: db 02          IN A,(02h)
+3: dc 02 03       CALL C,0302h
+2: dd 02          LD (BC),A
+2: de 02          SBC A,02h
+1: df             RST 18h 
+1: e0             RET PO 
+1: e1             POP HL 
+3: e2 02 03       JP PO,0302h
+1: e3             EX (SP),HL
+3: e4 02 03       CALL PO,0302h
+1: e5             PUSH HL 
+2: e6 02          AND A,02h
+1: e7             RST 20h 
+1: e8             RET PE 
+1: e9             JP (HL) 
+3: ea 02 03       JP PE,0302h
+1: eb             EX DE,HL
+3: ec 02 03       CALL PE,0302h
+2: ed 02          <No opcode>
+2: ee 02          XOR A,02h
+1: ef             RST 28h 
+1: f0             RET P 
+1: f1             POP AF 
+3: f2 02 03       JP P,0302h
+1: f3             DI  
+3: f4 02 03       CALL P,0302h
+1: f5             PUSH AF 
+2: f6 02          OR A,02h
+1: f7             RST 30h 
+1: f8             RET M 
+1: f9             LD SP,HL
+3: fa 02 03       JP M,0302h
+1: fb             EI  
+3: fc 02 03       CALL M,0302h
+2: fd 02          LD (BC),A
+2: fe 02          CP A,02h
+1: ff             RST 38h 
+
+2: ed 00          <No opcode>
+2: ed 01          <No opcode>
+2: ed 02          <No opcode>
+2: ed 03          <No opcode>
+2: ed 04          <No opcode>
+2: ed 05          <No opcode>
+2: ed 06          <No opcode>
+2: ed 07          <No opcode>
+2: ed 08          <No opcode>
+2: ed 09          <No opcode>
+2: ed 0a          <No opcode>
+2: ed 0b          <No opcode>
+2: ed 0c          <No opcode>
+2: ed 0d          <No opcode>
+2: ed 0e          <No opcode>
+2: ed 0f          <No opcode>
+2: ed 10          <No opcode>
+2: ed 11          <No opcode>
+2: ed 12          <No opcode>
+2: ed 13          <No opcode>
+2: ed 14          <No opcode>
+2: ed 15          <No opcode>
+2: ed 16          <No opcode>
+2: ed 17          <No opcode>
+2: ed 18          <No opcode>
+2: ed 19          <No opcode>
+2: ed 1a          <No opcode>
+2: ed 1b          <No opcode>
+2: ed 1c          <No opcode>
+2: ed 1d          <No opcode>
+2: ed 1e          <No opcode>
+2: ed 1f          <No opcode>
+2: ed 20          <No opcode>
+2: ed 21          <No opcode>
+2: ed 22          <No opcode>
+2: ed 23          <No opcode>
+2: ed 24          <No opcode>
+2: ed 25          <No opcode>
+2: ed 26          <No opcode>
+2: ed 27          <No opcode>
+2: ed 28          <No opcode>
+2: ed 29          <No opcode>
+2: ed 2a          <No opcode>
+2: ed 2b          <No opcode>
+2: ed 2c          <No opcode>
+2: ed 2d          <No opcode>
+2: ed 2e          <No opcode>
+2: ed 2f          <No opcode>
+2: ed 30          <No opcode>
+2: ed 31          <No opcode>
+2: ed 32          <No opcode>
+2: ed 33          <No opcode>
+2: ed 34          <No opcode>
+2: ed 35          <No opcode>
+2: ed 36          <No opcode>
+2: ed 37          <No opcode>
+2: ed 38          <No opcode>
+2: ed 39          <No opcode>
+2: ed 3a          <No opcode>
+2: ed 3b          <No opcode>
+2: ed 3c          <No opcode>
+2: ed 3d          <No opcode>
+2: ed 3e          <No opcode>
+2: ed 3f          <No opcode>
+2: ed 40          IN B,(C)
+2: ed 41          OUT (C),B
+2: ed 42          SBC HL,BC
+4: ed 43 03 04    LD (0403h),BC
+2: ed 44          NEG  
+2: ed 45          RETN  
+2: ed 46          IM_0  
+2: ed 47          LD I,A
+2: ed 48          IN C,(C)
+2: ed 49          OUT (C),C
+2: ed 4a          ADC HL,BC
+4: ed 4b 03 04    LD BC,(0403h)
+2: ed 4c          NEG  
+2: ed 4d          RETI  
+2: ed 4e          IM_0  
+2: ed 4f          LD R,A
+2: ed 50          IN D,(C)
+2: ed 51          OUT (C),D
+2: ed 52          SBC HL,DE
+4: ed 53 03 04    LD (0403h),DE
+2: ed 54          NEG  
+2: ed 55          RETN  
+2: ed 56          IM_1  
+2: ed 57          LD A,I
+2: ed 58          IN E,(C)
+2: ed 59          OUT (C),E
+2: ed 5a          ADC HL,DE
+4: ed 5b 03 04    LD DE,(0403h)
+2: ed 5c          NEG  
+2: ed 5d          RETN  
+2: ed 5e          IM_2  
+2: ed 5f          LD A,R
+2: ed 60          IN H,(C)
+2: ed 61          OUT (C),H
+2: ed 62          SBC HL,HL
+4: ed 63 03 04    LD (0403h),HL
+2: ed 64          NEG  
+2: ed 65          RETN  
+2: ed 66          IM_0  
+2: ed 67          RRD  
+2: ed 68          IN L,(C)
+2: ed 69          OUT (C),L
+2: ed 6a          ADC HL,HL
+4: ed 6b 03 04    LD HL,(0403h)
+2: ed 6c          NEG  
+2: ed 6d          RETN  
+2: ed 6e          IM_0  
+2: ed 6f          RLD  
+2: ed 70          IN -,(C)
+2: ed 71          OUT (C),0
+2: ed 72          SBC HL,SP
+4: ed 73 03 04    LD (0403h),SP
+2: ed 74          NEG  
+2: ed 75          RETN  
+2: ed 76          IM_1  
+2: ed 77          <No opcode>
+2: ed 78          IN A,(C)
+2: ed 79          OUT (C),A
+2: ed 7a          ADC HL,SP
+4: ed 7b 03 04    LD SP,(0403h)
+2: ed 7c          NEG  
+2: ed 7d          RETN  
+2: ed 7e          IM_2  
+2: ed 7f          <No opcode>
+2: ed 80          <No opcode>
+2: ed 81          <No opcode>
+2: ed 82          <No opcode>
+2: ed 83          <No opcode>
+2: ed 84          <No opcode>
+2: ed 85          <No opcode>
+2: ed 86          <No opcode>
+2: ed 87          <No opcode>
+2: ed 88          <No opcode>
+2: ed 89          <No opcode>
+2: ed 8a          <No opcode>
+2: ed 8b          <No opcode>
+2: ed 8c          <No opcode>
+2: ed 8d          <No opcode>
+2: ed 8e          <No opcode>
+2: ed 8f          <No opcode>
+2: ed 90          <No opcode>
+2: ed 91          <No opcode>
+2: ed 92          <No opcode>
+2: ed 93          <No opcode>
+2: ed 94          <No opcode>
+2: ed 95          <No opcode>
+2: ed 96          <No opcode>
+2: ed 97          <No opcode>
+2: ed 98          <No opcode>
+2: ed 99          <No opcode>
+2: ed 9a          <No opcode>
+2: ed 9b          <No opcode>
+2: ed 9c          <No opcode>
+2: ed 9d          <No opcode>
+2: ed 9e          <No opcode>
+2: ed 9f          <No opcode>
+2: ed a0          LDI  
+2: ed a1          CPI  
+2: ed a2          INI  
+2: ed a3          OUTI  
+2: ed a4          <No opcode>
+2: ed a5          <No opcode>
+2: ed a6          <No opcode>
+2: ed a7          <No opcode>
+2: ed a8          LDD  
+2: ed a9          CPD  
+2: ed aa          IND  
+2: ed ab          OUTD  
+2: ed ac          <No opcode>
+2: ed ad          <No opcode>
+2: ed ae          <No opcode>
+2: ed af          <No opcode>
+2: ed b0          LDIR  
+2: ed b1          CPIR  
+2: ed b2          INIR  
+2: ed b3          OTIR  
+2: ed b4          <No opcode>
+2: ed b5          <No opcode>
+2: ed b6          <No opcode>
+2: ed b7          <No opcode>
+2: ed b8          LDDR  
+2: ed b9          CPDR  
+2: ed ba          INDR  
+2: ed bb          OTDR  
+2: ed bc          <No opcode>
+2: ed bd          <No opcode>
+2: ed be          <No opcode>
+2: ed bf          <No opcode>
+2: ed c0          <No opcode>
+2: ed c1          <No opcode>
+2: ed c2          <No opcode>
+2: ed c3          <No opcode>
+2: ed c4          <No opcode>
+2: ed c5          <No opcode>
+2: ed c6          <No opcode>
+2: ed c7          <No opcode>
+2: ed c8          <No opcode>
+2: ed c9          <No opcode>
+2: ed ca          <No opcode>
+2: ed cb          <No opcode>
+2: ed cc          <No opcode>
+2: ed cd          <No opcode>
+2: ed ce          <No opcode>
+2: ed cf          <No opcode>
+2: ed d0          <No opcode>
+2: ed d1          <No opcode>
+2: ed d2          <No opcode>
+2: ed d3          <No opcode>
+2: ed d4          <No opcode>
+2: ed d5          <No opcode>
+2: ed d6          <No opcode>
+2: ed d7          <No opcode>
+2: ed d8          <No opcode>
+2: ed d9          <No opcode>
+2: ed da          <No opcode>
+2: ed db          <No opcode>
+2: ed dc          <No opcode>
+2: ed dd          <No opcode>
+2: ed de          <No opcode>
+2: ed df          <No opcode>
+2: ed e0          <No opcode>
+2: ed e1          <No opcode>
+2: ed e2          <No opcode>
+2: ed e3          <No opcode>
+2: ed e4          <No opcode>
+2: ed e5          <No opcode>
+2: ed e6          <No opcode>
+2: ed e7          <No opcode>
+2: ed e8          <No opcode>
+2: ed e9          <No opcode>
+2: ed ea          <No opcode>
+2: ed eb          <No opcode>
+2: ed ec          <No opcode>
+2: ed ed          <No opcode>
+2: ed ee          <No opcode>
+2: ed ef          <No opcode>
+2: ed f0          <No opcode>
+2: ed f1          <No opcode>
+2: ed f2          <No opcode>
+2: ed f3          <No opcode>
+2: ed f4          <No opcode>
+2: ed f5          <No opcode>
+2: ed f6          <No opcode>
+2: ed f7          <No opcode>
+2: ed f8          <No opcode>
+2: ed f9          <No opcode>
+2: ed fa          <No opcode>
+2: ed fb          <No opcode>
+2: ed fc          <No opcode>
+2: ed fd          <No opcode>
+2: ed fe          <No opcode>
+2: ed ff          <No opcode>
+
+2: cb 00          RLC B 
+2: cb 01          RLC C 
+2: cb 02          RLC D 
+2: cb 03          RLC E 
+2: cb 04          RLC H 
+2: cb 05          RLC L 
+2: cb 06          RLC (HL) 
+2: cb 07          RLC A 
+2: cb 08          RRC B 
+2: cb 09          RRC C 
+2: cb 0a          RRC D 
+2: cb 0b          RRC E 
+2: cb 0c          RRC H 
+2: cb 0d          RRC L 
+2: cb 0e          RRC (HL) 
+2: cb 0f          RRC A 
+2: cb 10          RL B 
+2: cb 11          RL C 
+2: cb 12          RL D 
+2: cb 13          RL E 
+2: cb 14          RL H 
+2: cb 15          RL L 
+2: cb 16          RL (HL) 
+2: cb 17          RL A 
+2: cb 18          RR B 
+2: cb 19          RR C 
+2: cb 1a          RR D 
+2: cb 1b          RR E 
+2: cb 1c          RR H 
+2: cb 1d          RR L 
+2: cb 1e          RR (HL) 
+2: cb 1f          RR A 
+2: cb 20          SLA B 
+2: cb 21          SLA C 
+2: cb 22          SLA D 
+2: cb 23          SLA E 
+2: cb 24          SLA H 
+2: cb 25          SLA L 
+2: cb 26          SLA (HL) 
+2: cb 27          SLA A 
+2: cb 28          SRA B 
+2: cb 29          SRA C 
+2: cb 2a          SRA D 
+2: cb 2b          SRA E 
+2: cb 2c          SRA H 
+2: cb 2d          SRA L 
+2: cb 2e          SRA (HL) 
+2: cb 2f          SRA A 
+2: cb 30          SL1 B 
+2: cb 31          SL1 C 
+2: cb 32          SL1 D 
+2: cb 33          SL1 E 
+2: cb 34          SL1 H 
+2: cb 35          SL1 L 
+2: cb 36          SL1 (HL) 
+2: cb 37          SL1 A 
+2: cb 38          SRL B 
+2: cb 39          SRL C 
+2: cb 3a          SRL D 
+2: cb 3b          SRL E 
+2: cb 3c          SRL H 
+2: cb 3d          SRL L 
+2: cb 3e          SRL (HL) 
+2: cb 3f          SRL A 
+2: cb 40          BIT 0,B
+2: cb 41          BIT 0,C
+2: cb 42          BIT 0,D
+2: cb 43          BIT 0,E
+2: cb 44          BIT 0,H
+2: cb 45          BIT 0,L
+2: cb 46          BIT 0,(HL)
+2: cb 47          BIT 0,A
+2: cb 48          BIT 1,B
+2: cb 49          BIT 1,C
+2: cb 4a          BIT 1,D
+2: cb 4b          BIT 1,E
+2: cb 4c          BIT 1,H
+2: cb 4d          BIT 1,L
+2: cb 4e          BIT 1,(HL)
+2: cb 4f          BIT 1,A
+2: cb 50          BIT 2,B
+2: cb 51          BIT 2,C
+2: cb 52          BIT 2,D
+2: cb 53          BIT 2,E
+2: cb 54          BIT 2,H
+2: cb 55          BIT 2,L
+2: cb 56          BIT 2,(HL)
+2: cb 57          BIT 2,A
+2: cb 58          BIT 3,B
+2: cb 59          BIT 3,C
+2: cb 5a          BIT 3,D
+2: cb 5b          BIT 3,E
+2: cb 5c          BIT 3,H
+2: cb 5d          BIT 3,L
+2: cb 5e          BIT 3,(HL)
+2: cb 5f          BIT 3,A
+2: cb 60          BIT 4,B
+2: cb 61          BIT 4,C
+2: cb 62          BIT 4,D
+2: cb 63          BIT 4,E
+2: cb 64          BIT 4,H
+2: cb 65          BIT 4,L
+2: cb 66          BIT 4,(HL)
+2: cb 67          BIT 4,A
+2: cb 68          BIT 5,B
+2: cb 69          BIT 5,C
+2: cb 6a          BIT 5,D
+2: cb 6b          BIT 5,E
+2: cb 6c          BIT 5,H
+2: cb 6d          BIT 5,L
+2: cb 6e          BIT 5,(HL)
+2: cb 6f          BIT 5,A
+2: cb 70          BIT 6,B
+2: cb 71          BIT 6,C
+2: cb 72          BIT 6,D
+2: cb 73          BIT 6,E
+2: cb 74          BIT 6,H
+2: cb 75          BIT 6,L
+2: cb 76          BIT 6,(HL)
+2: cb 77          BIT 6,A
+2: cb 78          BIT 7,B
+2: cb 79          BIT 7,C
+2: cb 7a          BIT 7,D
+2: cb 7b          BIT 7,E
+2: cb 7c          BIT 7,H
+2: cb 7d          BIT 7,L
+2: cb 7e          BIT 7,(HL)
+2: cb 7f          BIT 7,A
+2: cb 80          RES 0,B
+2: cb 81          RES 0,C
+2: cb 82          RES 0,D
+2: cb 83          RES 0,E
+2: cb 84          RES 0,H
+2: cb 85          RES 0,L
+2: cb 86          RES 0,(HL)
+2: cb 87          RES 0,A
+2: cb 88          RES 1,B
+2: cb 89          RES 1,C
+2: cb 8a          RES 1,D
+2: cb 8b          RES 1,E
+2: cb 8c          RES 1,H
+2: cb 8d          RES 1,L
+2: cb 8e          RES 1,(HL)
+2: cb 8f          RES 1,A
+2: cb 90          RES 2,B
+2: cb 91          RES 2,C
+2: cb 92          RES 2,D
+2: cb 93          RES 2,E
+2: cb 94          RES 2,H
+2: cb 95          RES 2,L
+2: cb 96          RES 2,(HL)
+2: cb 97          RES 2,A
+2: cb 98          RES 3,B
+2: cb 99          RES 3,C
+2: cb 9a          RES 3,D
+2: cb 9b          RES 3,E
+2: cb 9c          RES 3,H
+2: cb 9d          RES 3,L
+2: cb 9e          RES 3,(HL)
+2: cb 9f          RES 3,A
+2: cb a0          RES 4,B
+2: cb a1          RES 4,C
+2: cb a2          RES 4,D
+2: cb a3          RES 4,E
+2: cb a4          RES 4,H
+2: cb a5          RES 4,L
+2: cb a6          RES 4,(HL)
+2: cb a7          RES 4,A
+2: cb a8          RES 5,B
+2: cb a9          RES 5,C
+2: cb aa          RES 5,D
+2: cb ab          RES 5,E
+2: cb ac          RES 5,H
+2: cb ad          RES 5,L
+2: cb ae          RES 5,(HL)
+2: cb af          RES 5,A
+2: cb b0          RES 6,B
+2: cb b1          RES 6,C
+2: cb b2          RES 6,D
+2: cb b3          RES 6,E
+2: cb b4          RES 6,H
+2: cb b5          RES 6,L
+2: cb b6          RES 6,(HL)
+2: cb b7          RES 6,A
+2: cb b8          RES 7,B
+2: cb b9          RES 7,C
+2: cb ba          RES 7,D
+2: cb bb          RES 7,E
+2: cb bc          RES 7,H
+2: cb bd          RES 7,L
+2: cb be          RES 7,(HL)
+2: cb bf          RES 7,A
+2: cb c0          SET 0,B
+2: cb c1          SET 0,C
+2: cb c2          SET 0,D
+2: cb c3          SET 0,E
+2: cb c4          SET 0,H
+2: cb c5          SET 0,L
+2: cb c6          SET 0,(HL)
+2: cb c7          SET 0,A
+2: cb c8          SET 1,B
+2: cb c9          SET 1,C
+2: cb ca          SET 1,D
+2: cb cb          SET 1,E
+2: cb cc          SET 1,H
+2: cb cd          SET 1,L
+2: cb ce          SET 1,(HL)
+2: cb cf          SET 1,A
+2: cb d0          SET 2,B
+2: cb d1          SET 2,C
+2: cb d2          SET 2,D
+2: cb d3          SET 2,E
+2: cb d4          SET 2,H
+2: cb d5          SET 2,L
+2: cb d6          SET 2,(HL)
+2: cb d7          SET 2,A
+2: cb d8          SET 3,B
+2: cb d9          SET 3,C
+2: cb da          SET 3,D
+2: cb db          SET 3,E
+2: cb dc          SET 3,H
+2: cb dd          SET 3,L
+2: cb de          SET 3,(HL)
+2: cb df          SET 3,A
+2: cb e0          SET 4,B
+2: cb e1          SET 4,C
+2: cb e2          SET 4,D
+2: cb e3          SET 4,E
+2: cb e4          SET 4,H
+2: cb e5          SET 4,L
+2: cb e6          SET 4,(HL)
+2: cb e7          SET 4,A
+2: cb e8          SET 5,B
+2: cb e9          SET 5,C
+2: cb ea          SET 5,D
+2: cb eb          SET 5,E
+2: cb ec          SET 5,H
+2: cb ed          SET 5,L
+2: cb ee          SET 5,(HL)
+2: cb ef          SET 5,A
+2: cb f0          SET 6,B
+2: cb f1          SET 6,C
+2: cb f2          SET 6,D
+2: cb f3          SET 6,E
+2: cb f4          SET 6,H
+2: cb f5          SET 6,L
+2: cb f6          SET 6,(HL)
+2: cb f7          SET 6,A
+2: cb f8          SET 7,B
+2: cb f9          SET 7,C
+2: cb fa          SET 7,D
+2: cb fb          SET 7,E
+2: cb fc          SET 7,H
+2: cb fd          SET 7,L
+2: cb fe          SET 7,(HL)
+2: cb ff          SET 7,A
+
+
+
+2: dd 00          NOP  
+4: dd 01 03 04    LD BC,0403h
+2: dd 02          LD (BC),A
+2: dd 03          INC BC 
+2: dd 04          INC B 
+2: dd 05          DEC B 
+3: dd 06 03       LD B,03h
+2: dd 07          RLCA  
+2: dd 08          EX AF,AF'
+2: dd 09          ADD IX,BC
+2: dd 0a          LD A,(BC)
+2: dd 0b          DEC BC 
+2: dd 0c          INC C 
+2: dd 0d          DEC C 
+3: dd 0e 03       LD C,03h
+2: dd 0f          RRCA  
+3: dd 10 03       DJNZ 03h 
+4: dd 11 03 04    LD DE,0403h
+2: dd 12          LD (DE),A
+2: dd 13          INC DE 
+2: dd 14          INC D 
+2: dd 15          DEC D 
+3: dd 16 03       LD D,03h
+2: dd 17          RLA  
+3: dd 18 03       JR 03h 
+2: dd 19          ADD IX,DE
+2: dd 1a          LD A,(DE)
+2: dd 1b          DEC DE 
+2: dd 1c          INC E 
+2: dd 1d          DEC E 
+3: dd 1e 03       LD E,03h
+2: dd 1f          RRA  
+3: dd 20 03       JR NZ,03h
+4: dd 21 03 04    LD IX,0403h
+4: dd 22 03 04    LD (0403h),IX
+2: dd 23          INC IX 
+2: dd 24          INC IXH 
+2: dd 25          DEC IXH 
+3: dd 26 03       LD IXH,03h
+2: dd 27          DAA  
+3: dd 28 03       JR Z,03h
+2: dd 29          ADD IX,IX
+4: dd 2a 03 04    LD IX,(0403h)
+2: dd 2b          DEC IX 
+2: dd 2c          INC IXL 
+2: dd 2d          DEC IXL 
+3: dd 2e 03       LD IXL,03h
+2: dd 2f          CPL  
+3: dd 30 03       JR NC,03h
+4: dd 31 03 04    LD SP,0403h
+4: dd 32 03 04    LD (0403h),A
+2: dd 33          INC SP 
+3: dd 34 03       INC (IX+03h) 
+3: dd 35 03       DEC (IX+03h) 
+4: dd 36 03 04    LD (IX+03h),04h
+2: dd 37          SCF  
+3: dd 38 03       JR C,03h
+2: dd 39          ADD IX,SP
+4: dd 3a 03 04    LD A,(0403h)
+2: dd 3b          DEC SP 
+2: dd 3c          INC A 
+2: dd 3d          DEC A 
+3: dd 3e 03       LD A,03h
+2: dd 3f          CCF  
+2: dd 40          LD B,B
+2: dd 41          LD B,C
+2: dd 42          LD B,D
+2: dd 43          LD B,E
+2: dd 44          LD B,IXH
+2: dd 45          LD B,IXL
+3: dd 46 03       LD B,(IX+03h)
+2: dd 47          LD B,A
+2: dd 48          LD C,B
+2: dd 49          LD C,C
+2: dd 4a          LD C,D
+2: dd 4b          LD C,E
+2: dd 4c          LD C,IXH
+2: dd 4d          LD C,IXL
+3: dd 4e 03       LD C,(IX+03h)
+2: dd 4f          LD C,A
+2: dd 50          LD D,B
+2: dd 51          LD D,C
+2: dd 52          LD D,D
+2: dd 53          LD D,E
+2: dd 54          LD D,IXH
+2: dd 55          LD D,IXL
+3: dd 56 03       LD D,(IX+03h)
+2: dd 57          LD D,A
+2: dd 58          LD E,B
+2: dd 59          LD E,C
+2: dd 5a          LD E,D
+2: dd 5b          LD E,E
+2: dd 5c          LD E,IXH
+2: dd 5d          LD E,IXL
+3: dd 5e 03       LD E,(IX+03h)
+2: dd 5f          LD E,A
+2: dd 60          LD IXH,B
+2: dd 61          LD IXH,C
+2: dd 62          LD IXH,D
+2: dd 63          LD IXH,E
+2: dd 64          LD IXH,IXH
+2: dd 65          LD IXH,IXL
+3: dd 66 03       LD H,(IX+03h)
+2: dd 67          LD IXH,A
+2: dd 68          LD IXL,B
+2: dd 69          LD IXL,C
+2: dd 6a          LD IXL,D
+2: dd 6b          LD IXL,E
+2: dd 6c          LD IXL,IXH
+2: dd 6d          LD IXL,IXL
+3: dd 6e 03       LD L,(IX+03h)
+2: dd 6f          LD IXL,A
+3: dd 70 03       LD (IX+03h),B
+3: dd 71 03       LD (IX+03h),C
+3: dd 72 03       LD (IX+03h),D
+3: dd 73 03       LD (IX+03h),E
+3: dd 74 03       LD (IX+03h),H
+3: dd 75 03       LD (IX+03h),L
+2: dd 76          HALT  
+3: dd 77 03       LD (IX+03h),A
+2: dd 78          LD A,B
+2: dd 79          LD A,C
+2: dd 7a          LD A,D
+2: dd 7b          LD A,E
+2: dd 7c          LD A,IXH
+2: dd 7d          LD A,IXL
+3: dd 7e 03       LD A,(IX+03h)
+2: dd 7f          LD A,A
+2: dd 80          ADD A,B
+2: dd 81          ADD A,C
+2: dd 82          ADD A,D
+2: dd 83          ADD A,E
+2: dd 84          ADD A,IXH
+2: dd 85          ADD A,IXL
+3: dd 86 03       ADD A,(IX+03h)
+2: dd 87          ADD A,A
+2: dd 88          ADC A,B
+2: dd 89          ADC A,C
+2: dd 8a          ADC A,D
+2: dd 8b          ADC A,E
+2: dd 8c          ADC A,IXH
+2: dd 8d          ADC A,IXL
+3: dd 8e 03       ADC A,(IX+03h)
+2: dd 8f          ADC A,A
+2: dd 90          SUB A,B
+2: dd 91          SUB A,C
+2: dd 92          SUB A,D
+2: dd 93          SUB A,E
+2: dd 94          SUB A,IXH
+2: dd 95          SUB A,IXL
+3: dd 96 03       SUB A,(IX+03h)
+2: dd 97          SUB A,A
+2: dd 98          SBC A,B
+2: dd 99          SBC A,C
+2: dd 9a          SBC A,D
+2: dd 9b          SBC A,E
+2: dd 9c          SBC A,IXH
+2: dd 9d          SBC A,IXL
+3: dd 9e 03       SBC A,(IX+03h)
+2: dd 9f          SBC A,A
+2: dd a0          AND A,B
+2: dd a1          AND A,C
+2: dd a2          AND A,D
+2: dd a3          AND A,E
+2: dd a4          AND A,IXH
+2: dd a5          AND A,IXL
+3: dd a6 03       AND A,(IX+03h)
+2: dd a7          AND A,A
+2: dd a8          XOR A,B
+2: dd a9          XOR A,C
+2: dd aa          XOR A,D
+2: dd ab          XOR A,E
+2: dd ac          XOR A,IXH
+2: dd ad          XOR A,IXL
+3: dd ae 03       XOR A,(IX+03h)
+2: dd af          XOR A,A
+2: dd b0          OR A,B
+2: dd b1          OR A,C
+2: dd b2          OR A,D
+2: dd b3          OR A,E
+2: dd b4          OR A,IXH
+2: dd b5          OR A,IXL
+3: dd b6 03       OR A,(IX+03h)
+2: dd b7          OR A,A
+2: dd b8          CP A,B
+2: dd b9          CP A,C
+2: dd ba          CP A,D
+2: dd bb          CP A,E
+2: dd bc          CP A,IXH
+2: dd bd          CP A,IXL
+3: dd be 03       CP A,(IX+03h)
+2: dd bf          CP A,A
+2: dd c0          RET NZ 
+2: dd c1          POP BC 
+4: dd c2 03 04    JP NZ,0403h
+4: dd c3 03 04    JP 0403h 
+4: dd c4 03 04    CALL NZ,0403h
+2: dd c5          PUSH BC 
+3: dd c6 03       ADD A,03h
+2: dd c7          RST 00h 
+2: dd c8          RET Z 
+2: dd c9          RET  
+4: dd ca 03 04    JP Z,0403h
+4: dd cb 03 04    RLC H,(IX+03h)
+4: dd cc 03 04    CALL Z,0403h
+4: dd cd 03 04    CALL 0403h 
+3: dd ce 03       ADC A,03h
+2: dd cf          RST 08h 
+2: dd d0          RET NC 
+2: dd d1          POP DE 
+4: dd d2 03 04    JP NC,0403h
+3: dd d3 03       OUT (03h),A
+4: dd d4 03 04    CALL NC,0403h
+2: dd d5          PUSH DE 
+3: dd d6 03       SUB A,03h
+2: dd d7          RST 10h 
+2: dd d8          RET C 
+2: dd d9          EXX  
+4: dd da 03 04    JP C,0403h
+3: dd db 03       IN A,(03h)
+4: dd dc 03 04    CALL C,0403h
+1: dd             <IX+No opcode!>
+3: dd de 03       SBC A,03h
+2: dd df          RST 18h 
+2: dd e0          RET PO 
+2: dd e1          POP IX 
+4: dd e2 03 04    JP PO,0403h
+2: dd e3          EX (SP),IX
+4: dd e4 03 04    CALL PO,0403h
+2: dd e5          PUSH IX 
+3: dd e6 03       AND A,03h
+2: dd e7          RST 20h 
+2: dd e8          RET PE 
+2: dd e9          JP (IX) 
+4: dd ea 03 04    JP PE,0403h
+2: dd eb          EX DE,HL
+4: dd ec 03 04    CALL PE,0403h
+3: dd ed 03       <No opcode>
+3: dd ee 03       XOR A,03h
+2: dd ef          RST 28h 
+2: dd f0          RET P 
+2: dd f1          POP AF 
+4: dd f2 03 04    JP P,0403h
+2: dd f3          DI  
+4: dd f4 03 04    CALL P,0403h
+2: dd f5          PUSH AF 
+3: dd f6 03       OR A,03h
+2: dd f7          RST 30h 
+2: dd f8          RET M 
+2: dd f9          LD SP,IX
+4: dd fa 03 04    JP M,0403h
+2: dd fb          EI  
+4: dd fc 03 04    CALL M,0403h
+1: dd             <IX+No opcode!>
+3: dd fe 03       CP A,03h
+2: dd ff          RST 38h 
+
+3: dd ed 00       <No opcode>
+3: dd ed 01       <No opcode>
+3: dd ed 02       <No opcode>
+3: dd ed 03       <No opcode>
+3: dd ed 04       <No opcode>
+3: dd ed 05       <No opcode>
+3: dd ed 06       <No opcode>
+3: dd ed 07       <No opcode>
+3: dd ed 08       <No opcode>
+3: dd ed 09       <No opcode>
+3: dd ed 0a       <No opcode>
+3: dd ed 0b       <No opcode>
+3: dd ed 0c       <No opcode>
+3: dd ed 0d       <No opcode>
+3: dd ed 0e       <No opcode>
+3: dd ed 0f       <No opcode>
+3: dd ed 10       <No opcode>
+3: dd ed 11       <No opcode>
+3: dd ed 12       <No opcode>
+3: dd ed 13       <No opcode>
+3: dd ed 14       <No opcode>
+3: dd ed 15       <No opcode>
+3: dd ed 16       <No opcode>
+3: dd ed 17       <No opcode>
+3: dd ed 18       <No opcode>
+3: dd ed 19       <No opcode>
+3: dd ed 1a       <No opcode>
+3: dd ed 1b       <No opcode>
+3: dd ed 1c       <No opcode>
+3: dd ed 1d       <No opcode>
+3: dd ed 1e       <No opcode>
+3: dd ed 1f       <No opcode>
+3: dd ed 20       <No opcode>
+3: dd ed 21       <No opcode>
+3: dd ed 22       <No opcode>
+3: dd ed 23       <No opcode>
+3: dd ed 24       <No opcode>
+3: dd ed 25       <No opcode>
+3: dd ed 26       <No opcode>
+3: dd ed 27       <No opcode>
+3: dd ed 28       <No opcode>
+3: dd ed 29       <No opcode>
+3: dd ed 2a       <No opcode>
+3: dd ed 2b       <No opcode>
+3: dd ed 2c       <No opcode>
+3: dd ed 2d       <No opcode>
+3: dd ed 2e       <No opcode>
+3: dd ed 2f       <No opcode>
+3: dd ed 30       <No opcode>
+3: dd ed 31       <No opcode>
+3: dd ed 32       <No opcode>
+3: dd ed 33       <No opcode>
+3: dd ed 34       <No opcode>
+3: dd ed 35       <No opcode>
+3: dd ed 36       <No opcode>
+3: dd ed 37       <No opcode>
+3: dd ed 38       <No opcode>
+3: dd ed 39       <No opcode>
+3: dd ed 3a       <No opcode>
+3: dd ed 3b       <No opcode>
+3: dd ed 3c       <No opcode>
+3: dd ed 3d       <No opcode>
+3: dd ed 3e       <No opcode>
+3: dd ed 3f       <No opcode>
+3: dd ed 40       IN B,(C)
+3: dd ed 41       OUT (C),B
+3: dd ed 42       SBC HL,BC
+5: dd ed 43 04 05 LD (0504h),BC
+3: dd ed 44       NEG  
+3: dd ed 45       RETN  
+3: dd ed 46       IM_0  
+3: dd ed 47       LD I,A
+3: dd ed 48       IN C,(C)
+3: dd ed 49       OUT (C),C
+3: dd ed 4a       ADC HL,BC
+5: dd ed 4b 04 05 LD BC,(0504h)
+3: dd ed 4c       NEG  
+3: dd ed 4d       RETI  
+3: dd ed 4e       IM_0  
+3: dd ed 4f       LD R,A
+3: dd ed 50       IN D,(C)
+3: dd ed 51       OUT (C),D
+3: dd ed 52       SBC HL,DE
+5: dd ed 53 04 05 LD (0504h),DE
+3: dd ed 54       NEG  
+3: dd ed 55       RETN  
+3: dd ed 56       IM_1  
+3: dd ed 57       LD A,I
+3: dd ed 58       IN E,(C)
+3: dd ed 59       OUT (C),E
+3: dd ed 5a       ADC HL,DE
+5: dd ed 5b 04 05 LD DE,(0504h)
+3: dd ed 5c       NEG  
+3: dd ed 5d       RETN  
+3: dd ed 5e       IM_2  
+3: dd ed 5f       LD A,R
+3: dd ed 60       IN H,(C)
+3: dd ed 61       OUT (C),H
+3: dd ed 62       SBC HL,HL
+5: dd ed 63 04 05 LD (0504h),HL
+3: dd ed 64       NEG  
+3: dd ed 65       RETN  
+3: dd ed 66       IM_0  
+3: dd ed 67       RRD  
+3: dd ed 68       IN L,(C)
+3: dd ed 69       OUT (C),L
+3: dd ed 6a       ADC HL,HL
+5: dd ed 6b 04 05 LD HL,(0504h)
+3: dd ed 6c       NEG  
+3: dd ed 6d       RETN  
+3: dd ed 6e       IM_0  
+3: dd ed 6f       RLD  
+3: dd ed 70       IN -,(C)
+3: dd ed 71       OUT (C),0
+3: dd ed 72       SBC HL,SP
+5: dd ed 73 04 05 LD (0504h),SP
+3: dd ed 74       NEG  
+3: dd ed 75       RETN  
+3: dd ed 76       IM_1  
+3: dd ed 77       <No opcode>
+3: dd ed 78       IN A,(C)
+3: dd ed 79       OUT (C),A
+3: dd ed 7a       ADC HL,SP
+5: dd ed 7b 04 05 LD SP,(0504h)
+3: dd ed 7c       NEG  
+3: dd ed 7d       RETN  
+3: dd ed 7e       IM_2  
+3: dd ed 7f       <No opcode>
+3: dd ed 80       <No opcode>
+3: dd ed 81       <No opcode>
+3: dd ed 82       <No opcode>
+3: dd ed 83       <No opcode>
+3: dd ed 84       <No opcode>
+3: dd ed 85       <No opcode>
+3: dd ed 86       <No opcode>
+3: dd ed 87       <No opcode>
+3: dd ed 88       <No opcode>
+3: dd ed 89       <No opcode>
+3: dd ed 8a       <No opcode>
+3: dd ed 8b       <No opcode>
+3: dd ed 8c       <No opcode>
+3: dd ed 8d       <No opcode>
+3: dd ed 8e       <No opcode>
+3: dd ed 8f       <No opcode>
+3: dd ed 90       <No opcode>
+3: dd ed 91       <No opcode>
+3: dd ed 92       <No opcode>
+3: dd ed 93       <No opcode>
+3: dd ed 94       <No opcode>
+3: dd ed 95       <No opcode>
+3: dd ed 96       <No opcode>
+3: dd ed 97       <No opcode>
+3: dd ed 98       <No opcode>
+3: dd ed 99       <No opcode>
+3: dd ed 9a       <No opcode>
+3: dd ed 9b       <No opcode>
+3: dd ed 9c       <No opcode>
+3: dd ed 9d       <No opcode>
+3: dd ed 9e       <No opcode>
+3: dd ed 9f       <No opcode>
+3: dd ed a0       LDI  
+3: dd ed a1       CPI  
+3: dd ed a2       INI  
+3: dd ed a3       OUTI  
+3: dd ed a4       <No opcode>
+3: dd ed a5       <No opcode>
+3: dd ed a6       <No opcode>
+3: dd ed a7       <No opcode>
+3: dd ed a8       LDD  
+3: dd ed a9       CPD  
+3: dd ed aa       IND  
+3: dd ed ab       OUTD  
+3: dd ed ac       <No opcode>
+3: dd ed ad       <No opcode>
+3: dd ed ae       <No opcode>
+3: dd ed af       <No opcode>
+3: dd ed b0       LDIR  
+3: dd ed b1       CPIR  
+3: dd ed b2       INIR  
+3: dd ed b3       OTIR  
+3: dd ed b4       <No opcode>
+3: dd ed b5       <No opcode>
+3: dd ed b6       <No opcode>
+3: dd ed b7       <No opcode>
+3: dd ed b8       LDDR  
+3: dd ed b9       CPDR  
+3: dd ed ba       INDR  
+3: dd ed bb       OTDR  
+3: dd ed bc       <No opcode>
+3: dd ed bd       <No opcode>
+3: dd ed be       <No opcode>
+3: dd ed bf       <No opcode>
+3: dd ed c0       <No opcode>
+3: dd ed c1       <No opcode>
+3: dd ed c2       <No opcode>
+3: dd ed c3       <No opcode>
+3: dd ed c4       <No opcode>
+3: dd ed c5       <No opcode>
+3: dd ed c6       <No opcode>
+3: dd ed c7       <No opcode>
+3: dd ed c8       <No opcode>
+3: dd ed c9       <No opcode>
+3: dd ed ca       <No opcode>
+3: dd ed cb       <No opcode>
+3: dd ed cc       <No opcode>
+3: dd ed cd       <No opcode>
+3: dd ed ce       <No opcode>
+3: dd ed cf       <No opcode>
+3: dd ed d0       <No opcode>
+3: dd ed d1       <No opcode>
+3: dd ed d2       <No opcode>
+3: dd ed d3       <No opcode>
+3: dd ed d4       <No opcode>
+3: dd ed d5       <No opcode>
+3: dd ed d6       <No opcode>
+3: dd ed d7       <No opcode>
+3: dd ed d8       <No opcode>
+3: dd ed d9       <No opcode>
+3: dd ed da       <No opcode>
+3: dd ed db       <No opcode>
+3: dd ed dc       <No opcode>
+3: dd ed dd       <No opcode>
+3: dd ed de       <No opcode>
+3: dd ed df       <No opcode>
+3: dd ed e0       <No opcode>
+3: dd ed e1       <No opcode>
+3: dd ed e2       <No opcode>
+3: dd ed e3       <No opcode>
+3: dd ed e4       <No opcode>
+3: dd ed e5       <No opcode>
+3: dd ed e6       <No opcode>
+3: dd ed e7       <No opcode>
+3: dd ed e8       <No opcode>
+3: dd ed e9       <No opcode>
+3: dd ed ea       <No opcode>
+3: dd ed eb       <No opcode>
+3: dd ed ec       <No opcode>
+3: dd ed ed       <No opcode>
+3: dd ed ee       <No opcode>
+3: dd ed ef       <No opcode>
+3: dd ed f0       <No opcode>
+3: dd ed f1       <No opcode>
+3: dd ed f2       <No opcode>
+3: dd ed f3       <No opcode>
+3: dd ed f4       <No opcode>
+3: dd ed f5       <No opcode>
+3: dd ed f6       <No opcode>
+3: dd ed f7       <No opcode>
+3: dd ed f8       <No opcode>
+3: dd ed f9       <No opcode>
+3: dd ed fa       <No opcode>
+3: dd ed fb       <No opcode>
+3: dd ed fc       <No opcode>
+3: dd ed fd       <No opcode>
+3: dd ed fe       <No opcode>
+3: dd ed ff       <No opcode>
+
+4: dd cb 03 00    RLC B,(IX+03h)
+4: dd cb 03 01    RLC C,(IX+03h)
+4: dd cb 03 02    RLC D,(IX+03h)
+4: dd cb 03 03    RLC E,(IX+03h)
+4: dd cb 03 04    RLC H,(IX+03h)
+4: dd cb 03 05    RLC L,(IX+03h)
+4: dd cb 03 06    RLC (IX+03h) 
+4: dd cb 03 07    RLC A,(IX+03h)
+4: dd cb 03 08    RRC B,(IX+03h)
+4: dd cb 03 09    RRC C,(IX+03h)
+4: dd cb 03 0a    RRC D,(IX+03h)
+4: dd cb 03 0b    RRC E,(IX+03h)
+4: dd cb 03 0c    RRC H,(IX+03h)
+4: dd cb 03 0d    RRC L,(IX+03h)
+4: dd cb 03 0e    RRC (IX+03h) 
+4: dd cb 03 0f    RRC A,(IX+03h)
+4: dd cb 03 10    RL B,(IX+03h)
+4: dd cb 03 11    RL C,(IX+03h)
+4: dd cb 03 12    RL D,(IX+03h)
+4: dd cb 03 13    RL E,(IX+03h)
+4: dd cb 03 14    RL H,(IX+03h)
+4: dd cb 03 15    RL L,(IX+03h)
+4: dd cb 03 16    RL (IX+03h) 
+4: dd cb 03 17    RL A,(IX+03h)
+4: dd cb 03 18    RR B,(IX+03h)
+4: dd cb 03 19    RR C,(IX+03h)
+4: dd cb 03 1a    RR D,(IX+03h)
+4: dd cb 03 1b    RR E,(IX+03h)
+4: dd cb 03 1c    RR H,(IX+03h)
+4: dd cb 03 1d    RR L,(IX+03h)
+4: dd cb 03 1e    RR (IX+03h) 
+4: dd cb 03 1f    RR A,(IX+03h)
+4: dd cb 03 20    SLA B,(IX+03h)
+4: dd cb 03 21    SLA C,(IX+03h)
+4: dd cb 03 22    SLA D,(IX+03h)
+4: dd cb 03 23    SLA E,(IX+03h)
+4: dd cb 03 24    SLA H,(IX+03h)
+4: dd cb 03 25    SLA L,(IX+03h)
+4: dd cb 03 26    SLA (IX+03h) 
+4: dd cb 03 27    SLA A,(IX+03h)
+4: dd cb 03 28    SRA B,(IX+03h)
+4: dd cb 03 29    SRA C,(IX+03h)
+4: dd cb 03 2a    SRA D,(IX+03h)
+4: dd cb 03 2b    SRA E,(IX+03h)
+4: dd cb 03 2c    SRA H,(IX+03h)
+4: dd cb 03 2d    SRA L,(IX+03h)
+4: dd cb 03 2e    SRA (IX+03h) 
+4: dd cb 03 2f    SRA A,(IX+03h)
+4: dd cb 03 30    SL1 B,(IX+03h)
+4: dd cb 03 31    SL1 C,(IX+03h)
+4: dd cb 03 32    SL1 D,(IX+03h)
+4: dd cb 03 33    SL1 E,(IX+03h)
+4: dd cb 03 34    SL1 H,(IX+03h)
+4: dd cb 03 35    SL1 L,(IX+03h)
+4: dd cb 03 36    SL1 (IX+03h) 
+4: dd cb 03 37    SL1 A,(IX+03h)
+4: dd cb 03 38    SRL B,(IX+03h)
+4: dd cb 03 39    SRL C,(IX+03h)
+4: dd cb 03 3a    SRL D,(IX+03h)
+4: dd cb 03 3b    SRL E,(IX+03h)
+4: dd cb 03 3c    SRL H,(IX+03h)
+4: dd cb 03 3d    SRL L,(IX+03h)
+4: dd cb 03 3e    SRL (IX+03h) 
+4: dd cb 03 3f    SRL A,(IX+03h)
+4: dd cb 03 40    BIT 0,(IX+03h)
+4: dd cb 03 41    BIT 0,(IX+03h)
+4: dd cb 03 42    BIT 0,(IX+03h)
+4: dd cb 03 43    BIT 0,(IX+03h)
+4: dd cb 03 44    BIT 0,(IX+03h)
+4: dd cb 03 45    BIT 0,(IX+03h)
+4: dd cb 03 46    BIT 0,(IX+03h)
+4: dd cb 03 47    BIT 0,(IX+03h)
+4: dd cb 03 48    BIT 1,(IX+03h)
+4: dd cb 03 49    BIT 1,(IX+03h)
+4: dd cb 03 4a    BIT 1,(IX+03h)
+4: dd cb 03 4b    BIT 1,(IX+03h)
+4: dd cb 03 4c    BIT 1,(IX+03h)
+4: dd cb 03 4d    BIT 1,(IX+03h)
+4: dd cb 03 4e    BIT 1,(IX+03h)
+4: dd cb 03 4f    BIT 1,(IX+03h)
+4: dd cb 03 50    BIT 2,(IX+03h)
+4: dd cb 03 51    BIT 2,(IX+03h)
+4: dd cb 03 52    BIT 2,(IX+03h)
+4: dd cb 03 53    BIT 2,(IX+03h)
+4: dd cb 03 54    BIT 2,(IX+03h)
+4: dd cb 03 55    BIT 2,(IX+03h)
+4: dd cb 03 56    BIT 2,(IX+03h)
+4: dd cb 03 57    BIT 2,(IX+03h)
+4: dd cb 03 58    BIT 3,(IX+03h)
+4: dd cb 03 59    BIT 3,(IX+03h)
+4: dd cb 03 5a    BIT 3,(IX+03h)
+4: dd cb 03 5b    BIT 3,(IX+03h)
+4: dd cb 03 5c    BIT 3,(IX+03h)
+4: dd cb 03 5d    BIT 3,(IX+03h)
+4: dd cb 03 5e    BIT 3,(IX+03h)
+4: dd cb 03 5f    BIT 3,(IX+03h)
+4: dd cb 03 60    BIT 4,(IX+03h)
+4: dd cb 03 61    BIT 4,(IX+03h)
+4: dd cb 03 62    BIT 4,(IX+03h)
+4: dd cb 03 63    BIT 4,(IX+03h)
+4: dd cb 03 64    BIT 4,(IX+03h)
+4: dd cb 03 65    BIT 4,(IX+03h)
+4: dd cb 03 66    BIT 4,(IX+03h)
+4: dd cb 03 67    BIT 4,(IX+03h)
+4: dd cb 03 68    BIT 5,(IX+03h)
+4: dd cb 03 69    BIT 5,(IX+03h)
+4: dd cb 03 6a    BIT 5,(IX+03h)
+4: dd cb 03 6b    BIT 5,(IX+03h)
+4: dd cb 03 6c    BIT 5,(IX+03h)
+4: dd cb 03 6d    BIT 5,(IX+03h)
+4: dd cb 03 6e    BIT 5,(IX+03h)
+4: dd cb 03 6f    BIT 5,(IX+03h)
+4: dd cb 03 70    BIT 6,(IX+03h)
+4: dd cb 03 71    BIT 6,(IX+03h)
+4: dd cb 03 72    BIT 6,(IX+03h)
+4: dd cb 03 73    BIT 6,(IX+03h)
+4: dd cb 03 74    BIT 6,(IX+03h)
+4: dd cb 03 75    BIT 6,(IX+03h)
+4: dd cb 03 76    BIT 6,(IX+03h)
+4: dd cb 03 77    BIT 6,(IX+03h)
+4: dd cb 03 78    BIT 7,(IX+03h)
+4: dd cb 03 79    BIT 7,(IX+03h)
+4: dd cb 03 7a    BIT 7,(IX+03h)
+4: dd cb 03 7b    BIT 7,(IX+03h)
+4: dd cb 03 7c    BIT 7,(IX+03h)
+4: dd cb 03 7d    BIT 7,(IX+03h)
+4: dd cb 03 7e    BIT 7,(IX+03h)
+4: dd cb 03 7f    BIT 7,(IX+03h)
+4: dd cb 03 80    RES 0 B,(IX+03h)
+4: dd cb 03 81    RES 0 C,(IX+03h)
+4: dd cb 03 82    RES 0 D,(IX+03h)
+4: dd cb 03 83    RES 0 E,(IX+03h)
+4: dd cb 03 84    RES 0 H,(IX+03h)
+4: dd cb 03 85    RES 0 L,(IX+03h)
+4: dd cb 03 86    RES 0,(IX+03h)
+4: dd cb 03 87    RES 0 A,(IX+03h)
+4: dd cb 03 88    RES 1 B,(IX+03h)
+4: dd cb 03 89    RES 1 C,(IX+03h)
+4: dd cb 03 8a    RES 1 D,(IX+03h)
+4: dd cb 03 8b    RES 1 E,(IX+03h)
+4: dd cb 03 8c    RES 1 H,(IX+03h)
+4: dd cb 03 8d    RES 1 L,(IX+03h)
+4: dd cb 03 8e    RES 1,(IX+03h)
+4: dd cb 03 8f    RES 1 A,(IX+03h)
+4: dd cb 03 90    RES 2 B,(IX+03h)
+4: dd cb 03 91    RES 2 C,(IX+03h)
+4: dd cb 03 92    RES 2 D,(IX+03h)
+4: dd cb 03 93    RES 2 E,(IX+03h)
+4: dd cb 03 94    RES 2 H,(IX+03h)
+4: dd cb 03 95    RES 2 L,(IX+03h)
+4: dd cb 03 96    RES 2,(IX+03h)
+4: dd cb 03 97    RES 2 A,(IX+03h)
+4: dd cb 03 98    RES 3 B,(IX+03h)
+4: dd cb 03 99    RES 3 C,(IX+03h)
+4: dd cb 03 9a    RES 3 D,(IX+03h)
+4: dd cb 03 9b    RES 3 E,(IX+03h)
+4: dd cb 03 9c    RES 3 H,(IX+03h)
+4: dd cb 03 9d    RES 3 L,(IX+03h)
+4: dd cb 03 9e    RES 3,(IX+03h)
+4: dd cb 03 9f    RES 3 A,(IX+03h)
+4: dd cb 03 a0    RES 4 B,(IX+03h)
+4: dd cb 03 a1    RES 4 C,(IX+03h)
+4: dd cb 03 a2    RES 4 D,(IX+03h)
+4: dd cb 03 a3    RES 4 E,(IX+03h)
+4: dd cb 03 a4    RES 4 H,(IX+03h)
+4: dd cb 03 a5    RES 4 L,(IX+03h)
+4: dd cb 03 a6    RES 4,(IX+03h)
+4: dd cb 03 a7    RES 4 A,(IX+03h)
+4: dd cb 03 a8    RES 5 B,(IX+03h)
+4: dd cb 03 a9    RES 5 C,(IX+03h)
+4: dd cb 03 aa    RES 5 D,(IX+03h)
+4: dd cb 03 ab    RES 5 E,(IX+03h)
+4: dd cb 03 ac    RES 5 H,(IX+03h)
+4: dd cb 03 ad    RES 5 L,(IX+03h)
+4: dd cb 03 ae    RES 5,(IX+03h)
+4: dd cb 03 af    RES 5 A,(IX+03h)
+4: dd cb 03 b0    RES 6 B,(IX+03h)
+4: dd cb 03 b1    RES 6 C,(IX+03h)
+4: dd cb 03 b2    RES 6 D,(IX+03h)
+4: dd cb 03 b3    RES 6 E,(IX+03h)
+4: dd cb 03 b4    RES 6 H,(IX+03h)
+4: dd cb 03 b5    RES 6 L,(IX+03h)
+4: dd cb 03 b6    RES 6,(IX+03h)
+4: dd cb 03 b7    RES 6 A,(IX+03h)
+4: dd cb 03 b8    RES 7 B,(IX+03h)
+4: dd cb 03 b9    RES 7 C,(IX+03h)
+4: dd cb 03 ba    RES 7 D,(IX+03h)
+4: dd cb 03 bb    RES 7 E,(IX+03h)
+4: dd cb 03 bc    RES 7 H,(IX+03h)
+4: dd cb 03 bd    RES 7 L,(IX+03h)
+4: dd cb 03 be    RES 7,(IX+03h)
+4: dd cb 03 bf    RES 7 A,(IX+03h)
+4: dd cb 03 c0    SET 0 B,(IX+03h)
+4: dd cb 03 c1    SET 0 C,(IX+03h)
+4: dd cb 03 c2    SET 0 D,(IX+03h)
+4: dd cb 03 c3    SET 0 E,(IX+03h)
+4: dd cb 03 c4    SET 0 H,(IX+03h)
+4: dd cb 03 c5    SET 0 L,(IX+03h)
+4: dd cb 03 c6    SET 0,(IX+03h)
+4: dd cb 03 c7    SET 0 A,(IX+03h)
+4: dd cb 03 c8    SET 1 B,(IX+03h)
+4: dd cb 03 c9    SET 1 C,(IX+03h)
+4: dd cb 03 ca    SET 1 D,(IX+03h)
+4: dd cb 03 cb    SET 1 E,(IX+03h)
+4: dd cb 03 cc    SET 1 H,(IX+03h)
+4: dd cb 03 cd    SET 1 L,(IX+03h)
+4: dd cb 03 ce    SET 1,(IX+03h)
+4: dd cb 03 cf    SET 1 A,(IX+03h)
+4: dd cb 03 d0    SET 2 B,(IX+03h)
+4: dd cb 03 d1    SET 2 C,(IX+03h)
+4: dd cb 03 d2    SET 2 D,(IX+03h)
+4: dd cb 03 d3    SET 2 E,(IX+03h)
+4: dd cb 03 d4    SET 2 H,(IX+03h)
+4: dd cb 03 d5    SET 2 L,(IX+03h)
+4: dd cb 03 d6    SET 2,(IX+03h)
+4: dd cb 03 d7    SET 2 A,(IX+03h)
+4: dd cb 03 d8    SET 3 B,(IX+03h)
+4: dd cb 03 d9    SET 3 C,(IX+03h)
+4: dd cb 03 da    SET 3 D,(IX+03h)
+4: dd cb 03 db    SET 3 E,(IX+03h)
+4: dd cb 03 dc    SET 3 H,(IX+03h)
+4: dd cb 03 dd    SET 3 L,(IX+03h)
+4: dd cb 03 de    SET 3,(IX+03h)
+4: dd cb 03 df    SET 3 A,(IX+03h)
+4: dd cb 03 e0    SET 4 B,(IX+03h)
+4: dd cb 03 e1    SET 4 C,(IX+03h)
+4: dd cb 03 e2    SET 4 D,(IX+03h)
+4: dd cb 03 e3    SET 4 E,(IX+03h)
+4: dd cb 03 e4    SET 4 H,(IX+03h)
+4: dd cb 03 e5    SET 4 L,(IX+03h)
+4: dd cb 03 e6    SET 4,(IX+03h)
+4: dd cb 03 e7    SET 4 A,(IX+03h)
+4: dd cb 03 e8    SET 5 B,(IX+03h)
+4: dd cb 03 e9    SET 5 C,(IX+03h)
+4: dd cb 03 ea    SET 5 D,(IX+03h)
+4: dd cb 03 eb    SET 5 E,(IX+03h)
+4: dd cb 03 ec    SET 5 H,(IX+03h)
+4: dd cb 03 ed    SET 5 L,(IX+03h)
+4: dd cb 03 ee    SET 5,(IX+03h)
+4: dd cb 03 ef    SET 5 A,(IX+03h)
+4: dd cb 03 f0    SET 6 B,(IX+03h)
+4: dd cb 03 f1    SET 6 C,(IX+03h)
+4: dd cb 03 f2    SET 6 D,(IX+03h)
+4: dd cb 03 f3    SET 6 E,(IX+03h)
+4: dd cb 03 f4    SET 6 H,(IX+03h)
+4: dd cb 03 f5    SET 6 L,(IX+03h)
+4: dd cb 03 f6    SET 6,(IX+03h)
+4: dd cb 03 f7    SET 6 A,(IX+03h)
+4: dd cb 03 f8    SET 7 B,(IX+03h)
+4: dd cb 03 f9    SET 7 C,(IX+03h)
+4: dd cb 03 fa    SET 7 D,(IX+03h)
+4: dd cb 03 fb    SET 7 E,(IX+03h)
+4: dd cb 03 fc    SET 7 H,(IX+03h)
+4: dd cb 03 fd    SET 7 L,(IX+03h)
+4: dd cb 03 fe    SET 7,(IX+03h)
+4: dd cb 03 ff    SET 7 A,(IX+03h)
+
+
+
